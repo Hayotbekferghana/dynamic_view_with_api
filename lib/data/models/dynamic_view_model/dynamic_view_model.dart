@@ -25,7 +25,6 @@ class DynamicViewModel {
   @JsonKey(defaultValue: "", name: "type")
   String type;
 
-
   DynamicViewModel({
     required this.code,
     required this.width,
@@ -38,6 +37,6 @@ class DynamicViewModel {
 
   factory DynamicViewModel.fromJson(Map<String, dynamic> json) =>
       _$DynamicViewModelFromJson(json);
+
   Map<String, dynamic> toJson() => _$DynamicViewModelToJson(this);
 }
-
