@@ -5,13 +5,13 @@ part 'dynamic_view_model.g.dart';
 @JsonSerializable()
 class DynamicViewModel {
   @JsonKey(defaultValue: "", name: "title")
-  String code;
+  String title;
 
-  @JsonKey(defaultValue: 0.0, name: "width")
-  double width;
+  @JsonKey(defaultValue: 0, name: "width")
+  int width;
 
-  @JsonKey(defaultValue: 0.0, name: "height")
-  double height;
+  @JsonKey(defaultValue: 0, name: "height")
+  int height;
 
   @JsonKey(defaultValue: 0, name: "sort")
   int sort;
@@ -26,7 +26,7 @@ class DynamicViewModel {
   String type;
 
   DynamicViewModel({
-    required this.code,
+    required this.title,
     required this.width,
     required this.type,
     required this.color,

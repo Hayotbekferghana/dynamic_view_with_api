@@ -8,18 +8,18 @@ part of 'dynamic_view_model.dart';
 
 DynamicViewModel _$DynamicViewModelFromJson(Map<String, dynamic> json) =>
     DynamicViewModel(
-      code: json['title'] as String? ?? '',
-      width: (json['width'] as num?)?.toDouble() ?? 0.0,
+      title: json['title'] as String? ?? '',
+      width: json['width'] as int? ?? 0,
       type: json['type'] as String? ?? '',
       color: json['color'] as String? ?? '',
       group: json['group'] as String? ?? '',
       sort: json['sort'] as int? ?? 0,
-      height: (json['height'] as num?)?.toDouble() ?? 0.0,
+      height: json['height'] as int? ?? 0,
     );
 
 Map<String, dynamic> _$DynamicViewModelToJson(DynamicViewModel instance) =>
     <String, dynamic>{
-      'title': instance.code,
+      'title': instance.title,
       'width': instance.width,
       'height': instance.height,
       'sort': instance.sort,

@@ -21,7 +21,9 @@ class MyApp extends StatelessWidget {
             DynamicViewsCubit(viewsRepository: context.read<ViewsRepository>()),
         child: MaterialApp(
           title: 'Flutter Demo',
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(
+            useMaterial3: true,
             primarySwatch: Colors.blue,
           ),
           home: const DynamicView(),

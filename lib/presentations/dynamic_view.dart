@@ -1,8 +1,6 @@
 import 'package:dynamic_view_with_api/cubits/dynamic_views/dynamic_views_cubit.dart';
 import 'package:dynamic_view_with_api/data/models/dynamic_view_model/dynamic_view_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DynamicView extends StatelessWidget {
@@ -35,17 +33,22 @@ class DynamicView extends StatelessWidget {
                     ],
                   ),
                   child: Text(
-                    views[index].toString(),
+                    views[index].color.toString(),
                   ),
                 ),
               ),
             );
           } else if (state is DynamicViewsInFailure) {
             return Center(
-              child: Text(state.errorText),
+              child: Text(
+                state.errorText,
+                style: const TextStyle(color: Colors.black, fontSize: 23),
+              ),
             );
           }
-          return const SizedBox();
+          return const Center(
+            child: Text("else holat"),
+          );
         },
       ),
     );
